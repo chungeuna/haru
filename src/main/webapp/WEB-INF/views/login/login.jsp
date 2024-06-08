@@ -17,8 +17,8 @@ a { /* a태그 밑줄 없애기 */
 <body>
 	<h2>로그인</h2>
 	<form action="login" method="post" name ="login">
-		아이디:<input type="text" name="id"><br/>
-		비밀번호:<input type="password" name="pw"><br/>
+		아이디:<input type="text"  name="userId" id="userId"  placeholder="아이디"><br/>
+		비밀번호:<input type="password" name="password" id="password"  placeholder="비밀번호"><br/>
 		<input type="submit" value="로그인">
 	</form>
 	<a href="/login/findIdMove">아이디 찾기</a>|<a href="/login/findPasswordMove">비밀번호 찾기</a>|<a href="/login/memberJoinMove">회원가입</a>

@@ -19,7 +19,6 @@ public class LoginController {
 		return "main/main"; // 성공하면 메인화면으로 이동 
 	}
 	
-
 	// 회원가입 페이지로 이동 컨트롤러
 	@RequestMapping(value = "/memberJoinMove", method = RequestMethod.GET)
 	public String MmmberJoinMove() {
@@ -31,6 +30,24 @@ public class LoginController {
 	public String memberJoin() {
 		logger.info(">>>>>>  MemberJoinMoveController");
 		return "main/main"; // 성공하면 메인화면으로 이동 
+	}
+
+	//아이디 찾기 페이지로 이동 컨트롤러
+	@RequestMapping(value = "/findIdMove", method = RequestMethod.GET)
+	public String findIdMove() {
+		return "login/findId";
+	}
+
+	//아이디 찾기 컨트롤러
+	@RequestMapping(value = "/findId", method = RequestMethod.GET)
+	public String findId() {
+		return "login/findId";
+	}
+
+	//비밃번호 찾기 컨트롤러
+	@RequestMapping(value = "/findPasswordMove", method = RequestMethod.GET)
+	public String findPassword() {
+		return "login/findPassword";
 	}
 	
 }
