@@ -13,7 +13,7 @@
 	<!-- fullcalendar 언어 CDN -->
 	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>하루 다이어리 메인화면</title>
 <style>
 	html, body {
 		margin : 0;
@@ -24,7 +24,7 @@
 	}
 	#mainHdr {
 		border : 1px solid silver;
-		background-color : white;
+		background-color : aqua;
 		height : 20%;
 		width : 100%; 
 	}
@@ -43,7 +43,7 @@
 	}
 	#mainSctn {
 		border : 1px solid silver;
-		background-color : yellow;
+		background-color : white;
 		height : 100%;
 		width : 70%; 
 	}
@@ -83,17 +83,22 @@
       var calendarEl = $('#calendar')[0];
       // full-calendar 생성하기
       var calendar = new FullCalendar.Calendar(calendarEl, {
-        height: '300px', // calendar 높이 설정
-        expandRows: true, // 화면에 맞게 높이 재설정
-        slotMinTime: '08:00', // Day 캘린더에서 시작 시간
-        slotMaxTime: '20:00', // Day 캘린더에서 종료 시간
+          height: '100%'       // calendar 높이 설정
+        , expandRows: true      // 화면에 맞게 높이 재설정
+        , slotMinTime: '07:00'  // Day 캘린더에서 시작 시간
+        , slotMaxTime: '21:00'  // Day 캘린더에서 종료 시간
         // 해더에 표시할 툴바
+        /*
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
           right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
         },
-        initialView: 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+        */
+        , headerToolbar: { left  : 'prev next'
+        			     , center: 'title'
+        				 , right : 'today dayGridMonth' }
+        , initialView: 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
       //  initialDate: '2021-07-15', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
         navLinks: true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
       //  editable: true, // 수정 가능?
@@ -201,8 +206,7 @@ Common : Top panel
 				<tr>
 					<td>
 						<div id="profileImgDiv">
-							profileImgDiv
-							<img id="profileImg" referrerpolicy="no-referrer" src="main/bbb.png"/>
+							<img src="../../../../resources/images/main/mainProfileTestImg.jpg" height="50%" width="50%"/>
 						</div>
 					</td>
 				</tr>
@@ -280,6 +284,8 @@ Common : Top panel
 	</aside>
 </div>
 <footer id="mainFtr">
+Common : Foot panel
+
 </footer>
 </body>
 </html> 
