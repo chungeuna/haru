@@ -194,8 +194,19 @@
 </head>
 <body>
 <header id="mainHdr">
-Common : Top panel
-
+	<table id="headerTable" style="height:100%; width:100%">
+		<tr>
+			<td style="height:100%; width:89%">
+				<h1>하루 님의 홈</h1>
+			</td>
+			<td style="height:100%; width:6%">
+				<button type="button" onclick="location.href='/main/memberJoinMove'">마이페이지</button>
+			</td>
+			<td style="height:100%; width:5%">
+				<button type="button" onclick="location.href='이동할 페이지 주소'">로그아웃</button>
+			</td>
+		</tr>	
+	</table>
 </header>
 <div id="mainContainer">
 	<nav id="mainNav">
@@ -206,7 +217,7 @@ Common : Top panel
 				<tr>
 					<td>
 						<div id="profileImgDiv">
-							<img src="../../../../resources/images/main/mainProfileTestImg.jpg" height="50%" width="50%"/>
+							<img src="../../../../resources/images/main/mainProfileTestImg.jpg" height="70%" width="100%"/>
 						</div>
 					</td>
 				</tr>
