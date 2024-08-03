@@ -203,7 +203,7 @@
 				<button type="button" onclick="location.href='/main/memberJoinMove'">마이페이지</button>
 			</td>
 			<td style="height:100%; width:5%">
-				<button type="button" onclick="location.href='이동할 페이지 주소'">로그아웃</button>
+				<button type="button" onclick="location.href='/main/logoutMove'">로그아웃</button>
 			</td>
 		</tr>	
 	</table>

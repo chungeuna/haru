@@ -13,23 +13,16 @@ public class MainController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login() {
-		return "redirect:/login/memberJoin"; // 성공하면 메인화면으로 이동 
-	}
-	
-	// 회원가입 페이지로 이동 컨트롤러
-	@RequestMapping(value = "/memberJoinMove", method = RequestMethod.POST)
+	// 회원정보 조회 페이지로 이동
+	@RequestMapping(value = "/memberJoinMove", method = RequestMethod.GET)
 	public String MmmberJoinMove() {
-		logger.info("AAAAAAAAAAAAAAAAAAAAAAA");
+		System.out.println("********** 회원정보 조회 화면으로 건너가기 **********");
 		return "login/memberJoin";
 	}
 	
-	// 회원가입 컨트롤러
-	@RequestMapping(value = "/memberJoin", method = RequestMethod.GET)
-	public String memberJoin() {
-		logger.info(">>>>>>  MemberJoinMoveController");
-		return "main/main"; // 성공하면 메인화면으로 이동 
+	@RequestMapping(value = "/logoutMove", method = RequestMethod.GET)
+	public String logoutMove() {
+		System.out.println("********** 로그아웃 후 처음 화면으로 돌아가기 **********");
+		return "login/login";
 	}
-	
 }
